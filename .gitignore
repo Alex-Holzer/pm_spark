@@ -1,0 +1,54 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Packaging / build (setuptools, wheels)
+build/
+dist/
+*.egg
+*.egg-info/
+pip-wheel-metadata/
+share/python-wheels/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Test / type / lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs (local only)
+.idea/
+*.swp
+*.swo
+*~
+
+# Local / private — not pushed to GitHub (keep copies on your machine only)
+PROGRESS.md
+PROGRESS_ARCHIVE.md
+.cursorrules
+.cursor/

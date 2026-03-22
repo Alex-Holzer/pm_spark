@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0,<76", "wheel>=0.42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pm_spark"
+dynamic = ["version"]
+description = "PySpark process mining library for event logs (Databricks-friendly)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Alex Holzer" }]
+keywords = [
+    "databricks",
+    "event-log",
+    "process-mining",
+    "pyspark",
+    "spark",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+    # Databricks provides Spark; this pins the API surface the library targets.
+    "pyspark==3.5.0",
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "pm_spark.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pm_spark*"]
+exclude = ["dev*", "dist*", "build*", "*.egg-info*"]
