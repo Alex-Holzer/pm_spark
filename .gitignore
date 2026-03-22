@@ -32,6 +32,9 @@ htmlcov/
 # Jupyter
 .ipynb_checkpoints/
 
+# Local dev (notebooks, smoke scripts — excluded from wheel via pyproject.toml)
+dev/
+
 # Environment & secrets
 .env
 .env.*
